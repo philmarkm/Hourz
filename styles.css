@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('slide4.jpg'); /* Replace 'background.jpg' with your image file path */
+  background-size: cover; /* Scale the background image to cover the entire viewport */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center center; /* Position the background image at the center */
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+}
+
+
+
+.slideshow-container {
+  max-width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+  animation: glitch 5s infinite, shock 8s infinite;
+}
+
+@keyframes glitch {
+  0%, 100% {
+    border-color: #ff6b6b;
+  }
+  2%, 98% {
+    border-color: #00ff00;
+  }
+  4%, 96% {
+    border-color: #ff00ff;
+  }
+  6%, 94% {
+    border-color: #0000ff;
+  }
+}
+
+@keyframes shock {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.event-image.slide {
+  width: 80%; /* Set to 100% to fill container */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto;
+  display: block;
+  object-fit: contain; /* Fit the image within the container */
+  border: 8px solid #ff6b6b; /* Apply the border to the image */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.5); /* Add a subtle shadow */
+}
+
+/* Slideshow navigation buttons */
+.slideshow-nav {
+  margin-top: 10px;
+}
+
+.slideshow-nav button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+head{
+   background-color: purple ;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.event-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.qr-code {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.social-links {
+  margin-top: 30px;
+}
+
+.navigation-bar {
+  position: fixed; /* Fixed position */
+  background-color: rgba(240, 237, 245, 0.6); /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  top: 0; /* Position at the top of the viewport */
+  z-index: 100; /* Ensure it appears above other content */
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.navigation-text {
+  color: white;
+  margin: 0 10px; /* Add some spacing around the text */
+}
+
+.social-links {
+  margin: 0 10px; /* Add some spacing around the social icons */
+}
+
+.social-icon {
+  font-size: 24px;
+  margin: 0 5px; /* Adjust margin for icons */
+  color: #ff6b6b;
+  text-decoration: none;
+}
