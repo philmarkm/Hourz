@@ -21,3 +21,22 @@ function showSlides() {
 
 // Call the function to show the first slide
 showSlides();
+
+const introVideo = document.getElementById("intro-video");
+    const content = document.getElementById("content");
+
+    // When the video loads and starts playing
+    introVideo.addEventListener("canplaythrough", () => {
+      introVideo.play();
+    });
+
+    // When the video ends, hide the video and show the rest of the content
+    introVideo.addEventListener("ended", () => {
+      introVideo.pause();
+      introVideo.currentTime = 0;
+      introVideo.classList.add("hidden");
+      content.classList.remove("hidden");
+      document.body.style.overflow = "visible"; // Allow scrolling
+    });
+
+
