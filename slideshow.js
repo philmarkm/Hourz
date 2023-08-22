@@ -25,27 +25,5 @@ showSlides();
 const introVideo = document.getElementById("intro-video");
 const content = document.getElementById("content");
 
-// Check if the video is supported and can be played
-const canPlayVideo = introVideo.canPlayType && introVideo.canPlayType("video/mp4") !== "";
 
-if (canPlayVideo) {
-  // When the video loads and starts playing
-  introVideo.addEventListener("canplaythrough", () => {
-    introVideo.play();
-  });
-
-  // When the video ends, hide the video and show the rest of the content
-  introVideo.addEventListener("ended", () => {
-    introVideo.pause();
-    introVideo.currentTime = 0;
-    introVideo.classList.add("hidden");
-    content.classList.remove("hidden");
-    document.body.style.overflow = "visible"; // Allow scrolling
-  });
-} else {
-  // Video format is not supported, skip the video
-  introVideo.classList.add("hidden");
-  content.classList.remove("hidden");
-  document.body.style.overflow = "visible"; // Allow scrolling
-}
 
